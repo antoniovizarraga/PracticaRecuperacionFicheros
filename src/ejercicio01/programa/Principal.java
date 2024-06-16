@@ -25,6 +25,7 @@ public class Principal {
 		
 		System.out.println("La suma total es: " + suma);
 		System.out.println("La media aritmética es: " + media);
+		System.out.println();
 
 	}
 
