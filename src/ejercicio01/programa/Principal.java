@@ -1,12 +1,13 @@
 package ejercicio01.programa;
 
+import lecturayescritura.Lectura;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		String rutaFichero = "src/ejercicio01/ficherotexto/NumerosReales.txt";
 		
-		String contenido = Lectura.LeerFichero(rutaFichero);
+		String contenido = Lectura.LeerFicheroConBufer(rutaFichero);
 		
 		System.out.println(contenido);
 		

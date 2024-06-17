@@ -1,10 +1,11 @@
-package ejercicio01.programa;
+package lecturayescritura;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class Lectura {
 
-	public static String LeerFichero(String rutaFichero) {
+	public static String LeerFicheroConBufer(String rutaFichero) {
 		
 		String contenido = "";
 		String linea = "";
@@ -35,6 +36,32 @@ public class Lectura {
 		
 		return contenido;
 
+	}
+	
+	public static String LeerFicheroConScanner(String rutaFichero) {
+		Scanner sc;
+		
+		String contenido = "";
+		
+		try {
+			sc = new Scanner(new FileReader(rutaFichero));
+			
+			
+			while(sc.hasNextInt()) {
+				contenido += sc.nextInt() + " ";
+			}
+			
+			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			System.err.println("Fichero de texto no encontrado.");
+		}
+		
+		
+		
+		return contenido;
+		
+		
 	}
 
 }
